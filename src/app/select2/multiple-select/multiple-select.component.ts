@@ -44,6 +44,6 @@ export class MultipleSelectComponent implements OnInit, OnDestroy {
 
   selectAll() {
     jQuery(this.select.nativeElement)
-      .val(this.options.map(value => value.value)).trigger('change');
+      .val(this.options.map(option => option.value)).trigger('change');
   }
 }
