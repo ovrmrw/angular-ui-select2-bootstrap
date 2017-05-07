@@ -1,0 +1,9 @@
+<div class="input-group">
+  <select class="form-control select2-multiple" multiple="multiple" #select>
+    <option *ngFor="let o of options" [value]="o.value">{{ o.name }}</option>
+  </select>
+  <span class="input-group-btn">
+    <button type="button" class="btn btn-default" (click)="selectAll()" *ngIf="options.length !== selectedValues.length">全選択</button>
+    <button type="button" class="btn btn-default" (click)="clear()" *ngIf="options.length === selectedValues.length">クリア</button>
+  </span>
+</div>
